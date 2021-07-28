@@ -1,17 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import { imports } from "@s_stalwart_s/import-export-manager";
+const { imports, autoRequire } = require("~/Scripts/importExportManager");
 
-require("~/Components/Header");
-require("~/Components/Div");
-require("~/Components/Paragraph");
+autoRequire();
 
-const {
-  components: {
-    headers: { Header },
-  },
-} = imports;
+// require("~/Components/Header");
+// require("~/Components/Div");
+// require("~/Components/Paragraph");
 
 console.log(imports);
 

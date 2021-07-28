@@ -2,6 +2,7 @@ const Paragraph = ({ children }) => {
   return <p>{children}</p>;
 };
 
-require("@s_stalwart_s/import-export-manager").exporter("components.main", {
+require("~/Scripts/importExportManager").exporter("components.main", {
   Paragraph,
+  __filename,
 });

@@ -59,9 +59,17 @@ const exporter = (keyPath, value, filePath) => {
     filesPath.push(path);
   }
   assigner(imports, keyPath, value);
+  console.log(imports);
   return () => console.log("I DON'T RETURN ANYTHING!");
 };
 
-const autoRequire = () => filesPath.forEach((filePath) => require(filePath));
+const autoRequire = () => {
+  console.log("Start of auto require ");
+  filesPath.forEach((filePath) => {
+    console.log(filePath);
+    require(`~${filePath}`);
+  });
+  console.log("End of auto require ");
+};
 
-module.exports = { exporter, imports, lazyExporter, autoRequire };
+module.exports = { exporter, imports, lazyExporter, autoRequire, filesPath };
