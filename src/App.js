@@ -1,17 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-const { imports, autoRequire } = require("~/Scripts/importExportManager");
+const { imports } = require("@s_stalwart_s/import-export-manager");
 
-autoRequire();
-
-// require("~/Components/Header");
-// require("~/Components/Div");
-// require("~/Components/Paragraph");
-
-console.log(imports);
+const {
+  react: { useEffect },
+} = imports;
 
 function App() {
+  useEffect(() => {
+    console.log("YaY!");
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
