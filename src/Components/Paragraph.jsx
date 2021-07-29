@@ -1,8 +1,9 @@
+const { exporter } = require("@s_stalwart_s/import-export-manager");
+
 const Paragraph = ({ children }) => {
   return <p>{children}</p>;
 };
 
-require("~/Scripts/importExportManager").exporter("components.main", {
+exporter("components.main", {
   Paragraph,
-  __filename,
 });

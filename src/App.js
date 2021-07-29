@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-const { imports } = require("@s_stalwart_s/import-export-manager");
+const { imports, exporter } = require("@s_stalwart_s/import-export-manager");
 
 const {
-  react: { useEffect },
+  nodeModules: {
+    react: { useEffect },
+  },
 } = imports;
+
+console.log(imports);
 
 function App() {
   useEffect(() => {
@@ -13,24 +14,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          {/* <Div>Hello!</Div> */}
-        </a>
-      </header>
-    </div>
+    <center>
+      <div className="App">
+        <header className="App-header">
+          <h1>Welcome !</h1>
+        </header>
+      </div>
+    </center>
   );
 }
 
-export default App;
+exporter("components", { App });

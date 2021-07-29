@@ -1,10 +1,10 @@
 import { exporter } from "@s_stalwart_s/import-export-manager";
-
-const { isArray, isBoolean } = require("lodash");
-
-const { useEffect, useState, useMemo } = require("react");
+import { useEffect, useState, useMemo } from "react";
+import { render } from "react-dom";
+import { isArray, isBoolean } from "lodash";
 
 exporter("nodeModules", {
   react: { useEffect, useState, useMemo },
+  reactDOM: { render },
   lodash: { isArray, isBoolean },
 });
