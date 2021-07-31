@@ -4,8 +4,8 @@ require("~/Imports/nodeModules");
 // Components =>
 require("~/Components/Div");
 require("~/Components/Header");
-require("~/App");
 require("~/Components/Paragraph");
+require("~/App");
 
 // Scripts =>
 require("~/Scripts/Functions/utilsFunctions");
