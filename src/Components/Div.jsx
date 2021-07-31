@@ -1,4 +1,4 @@
-const { exporter } = require("@s_stalwart_s/import-export-manager");
+const { exporter, imports } = require("@s_stalwart_s/import-export-manager");
 
 const Div = ({ children }) => {
   return <div>{children}</div>;
@@ -7,3 +7,4 @@ const Div = ({ children }) => {
 exporter("components.utils", {
   Div,
 });
+console.log(imports);

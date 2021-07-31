@@ -1,12 +1,16 @@
 const { imports, exporter } = require("@s_stalwart_s/import-export-manager");
 
+console.log(imports);
 const {
   nodeModules: {
     react: { useEffect },
   },
+  components: {
+    utils: { Div },
+    main: { Paragraph },
+    headers: { Header },
+  },
 } = imports;
-
-console.log(imports);
 
 function App() {
   useEffect(() => {
@@ -16,9 +20,11 @@ function App() {
   return (
     <center>
       <div className="App">
-        <header className="App-header">
-          <h1>Welcome !</h1>
-        </header>
+        <Div>
+          <Header>
+            <Paragraph>Hallo!</Paragraph>
+          </Header>
+        </Div>
       </div>
     </center>
   );

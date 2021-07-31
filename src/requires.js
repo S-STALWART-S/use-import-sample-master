@@ -2,9 +2,9 @@
 require("~/Imports/nodeModules");
 
 // Components =>
-require("~/App");
 require("~/Components/Div");
 require("~/Components/Header");
+require("~/App");
 require("~/Components/Paragraph");
 
 // Scripts =>
